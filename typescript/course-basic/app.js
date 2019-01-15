@@ -1,2 +1,5 @@
-"use strict";
-console.log("It works!");
+var a = "abc";
+if (a) {
+    var c = 123;
+}
+console.log(c);
