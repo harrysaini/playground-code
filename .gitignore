@@ -13,6 +13,7 @@ pids
 
 dist/
 build/
+.vscode/
 
 
 # OS generated files #
