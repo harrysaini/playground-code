@@ -19,7 +19,7 @@ console.log(myself);
 //-------------- es6 -------------//
 
 // Exercise 1
-let double = (value: number):number =>  value * 2; ;
+let double = (value: number):number =>  value * 2; 
 console.log(double(10));
 
 // Exercise 2

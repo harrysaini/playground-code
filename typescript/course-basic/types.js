@@ -1,71 +1,61 @@
-export {};
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 // string
-let myName: string = 'Max';
+var myName = 'Max';
 // myName = 28;
-
 // number
-let myAge: number = 27;
+var myAge = 27;
 // myAge = 'Max';
-
 // boolean
-let hasHobbies: boolean = false;
+var hasHobbies = false;
 // hasHobbies = 1;
-
 // assign types
-let myRealAge: number;
+var myRealAge;
 myRealAge = 27;
 // myRealAge = '27';
-
 // array
-let hobbies: any[] = ["Cooking", "Sports"];
+var hobbies = ["Cooking", "Sports"];
 hobbies = [100];
 // hobbies = 100;
-
 // tuples
-let address: [string, number] = ["Super street", 99];
-
+var address = ["Super street", 99];
 // enum
-enum Color {
-    Gray, // 0
-    Green = 100, // 100
-    Blue = 2// 2
-}
-let myColor: Color = Color.Blue;
+var Color;
+(function (Color) {
+    Color[Color["Gray"] = 0] = "Gray";
+    Color[Color["Green"] = 100] = "Green";
+    Color[Color["Blue"] = 2] = "Blue"; // 2
+})(Color || (Color = {}));
+var myColor = Color.Blue;
 console.log(myColor);
-
 // any
-let car: any = "BMW";
+var car = "BMW";
 console.log(car);
-car = { brand: "BMW", series: 3};
+car = { brand: "BMW", series: 3 };
 console.log(car);
-
 // functions
-function returnMyName(): string {
+function returnMyName() {
     return myName;
 }
 console.log(returnMyName());
-
 // void
-function sayHello(): void {
+function sayHello() {
     console.log("Hello!");
 }
-
 // argument types
-function multiply(value1: number, value2: number): number {
+function multiply(value1, value2) {
     return value1 * value2;
 }
 // console.log(multiply(2, 'Max'));
 console.log(multiply(10, 2));
-
 // function types
-let myMultiply: (a: number, b: number) => number;
+var myMultiply;
 // myMultiply = sayHello;
 // myMultiply();
 myMultiply = multiply;
 console.log(myMultiply(5, 2));
-
 // objects
-let userData: { name: string, age: number } = {
+var userData = {
     name: "Max",
     age: 27
 };
@@ -73,36 +63,25 @@ let userData: { name: string, age: number } = {
 //     a: "Hello",
 //     b: 22
 // };
-
 // complex object
-let complex: {data: number[], output: (all: boolean) => number[]} = {
+var complex = {
     data: [100, 3.99, 10],
-
-    output: function (all: boolean): number[] {
+    output: function (all) {
         return this.data;
     }
 };
-// complex = {};
-
-// type alias
-
-type Complex = {data: number[], output: (all: boolean) => number[]};
-
-let complex2: Complex = {
+var complex2 = {
     data: [100, 3.99, 10],
-
-    output: function (all: boolean): number[] {
+    output: function (all) {
         return this.data;
     }
 };
-
 // union types
-let myRealRealAge: number | string = 27;
+var myRealRealAge = 27;
 myRealRealAge = "27";
 // myRealRealAge = true;
-
 // check types
-let finalValue = 30;
+var finalValue = 30;
 if (typeof finalValue == "number") {
     console.log("Final value is a number");
 }

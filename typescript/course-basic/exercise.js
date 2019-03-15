@@ -1,3 +1,4 @@
+"use strict";
 var bankAccount = {
     money: 2000,
     deposit: function (value) {
@@ -14,7 +15,6 @@ console.log(myself);
 //-------------- es6 -------------//
 // Exercise 1
 var double = function (value) { return value * 2; };
-;
 console.log(double(10));
 // Exercise 2
 var greet = function (name) {
