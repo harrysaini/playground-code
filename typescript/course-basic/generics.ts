@@ -62,7 +62,7 @@ console.log("-----------------------");
 class SimpleMath<T extends number | string, U extends number | string>{
     baseValue: T;
     multiplyValue: U;
-    multiply(){
+    multiply(): {
         return +this.baseValue * +this.multiplyValue;
     }
 }
@@ -72,3 +72,11 @@ simple.baseValue = "10";
 simple.multiplyValue = 4;
 console.log(simple.multiply());
 
+class GenericNumber<T> {
+    zeroValue: T;
+    add: (x: T, y: T) => T;
+}
+
+let myGenericNumber = new GenericNumber<string>();
+myGenericNumber.zeroValue = "dsad";
+myGenericNumber.add = function(x, y) { return x + y; };
