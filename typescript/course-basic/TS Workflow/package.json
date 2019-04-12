@@ -15,7 +15,7 @@
   "license": "MIT",
   "devDependencies": {
     "lite-server": "^2.2.2"
-  },6
+  },
   "dependencies": {
     "jquery": "^3.1.0",
     "systemjs": "^0.19.36"

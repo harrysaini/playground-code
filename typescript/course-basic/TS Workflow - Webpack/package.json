@@ -5,7 +5,9 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "lite-server"
+    "start": "lite-server",
+    "build": "webpack -d --watch",
+    "build:prod": "webpack -p"
   },
   "keywords": [
     "typescript",
@@ -14,10 +16,12 @@
   "author": "Maximilian Schwarzmueller",
   "license": "MIT",
   "devDependencies": {
-    "lite-server": "^2.2.2"
-  },6
+    "lite-server": "^2.2.2",
+    "ts-loader": "^0.8.2",
+    "typescript": "^1.8.10",
+    "webpack": "^1.13.2"
+  },
   "dependencies": {
-    "jquery": "^3.1.0",
-    "systemjs": "^0.19.36"
+    "jquery": "^3.1.0"
   }
 }
