@@ -47,6 +47,9 @@ class Pen {
 let k = new Pen("neem");
 ( < any > k).print();
 
+
+
+console.log('-------------------');
 //Method decoration
 
 function editable(value: boolean): Function {
@@ -65,9 +68,11 @@ function overwritable(value: boolean):Function{
 }
 
 function paramDeco(target: any, methodName: string , paramIndex: number){
+    console.log("--")
     console.log(target);
     console.log(methodName);
     console.log(paramIndex);
+    console.log('--')
 }
 
 class Project {
@@ -79,7 +84,7 @@ class Project {
 
     greet(count: number, @paramDeco message: string){
         for(let i =0 ;i< count; i++){
-            console.log(message);
+            console.log("in"+message);
         }
     }
 
@@ -96,3 +101,22 @@ pf.calcBudget()
 // }
 pf.calcBudget()
 pf.greet(14, "abc")
+
+console.log('-------------------');
+function classDecorator<T extends {new(...args:any[]):{}}>(constructor:T) {
+    return class extends constructor {
+        newProperty = "new property";
+        hello = "override";
+    }
+}
+
+@classDecorator
+class Greeter {
+    property = "property";
+    hello: string;
+    constructor(m: string) {
+        this.hello = m;
+    }
+}
+
+console.log(new Greeter("world"));
