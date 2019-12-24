@@ -11,5 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "express": "^4.17.1"
+  },
+  "dependencies": {
+    "webworker-threads": "^0.7.17"
   }
 }
