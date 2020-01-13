@@ -8,7 +8,13 @@ class SearchField extends React.Component {
 
   onFormSubmit = (event) => {
     event.preventDefault();
-    console.log(this.state.term);
+    const { term } = this.state;
+    console.log(term);
+    this.props.onSubmit(term);
+  }
+
+  onInputChange = e => {
+    this.setState({ term: e.target.value });
   }
 
   render() {
@@ -19,9 +25,7 @@ class SearchField extends React.Component {
             <label>Image search</label>
             <input
               type="text"
-              onChange={e => {
-                this.setState({ term: e.target.value });
-              }}
+              onChange={this.onInputChange}
               value={this.state.term}
             />
           </div>
